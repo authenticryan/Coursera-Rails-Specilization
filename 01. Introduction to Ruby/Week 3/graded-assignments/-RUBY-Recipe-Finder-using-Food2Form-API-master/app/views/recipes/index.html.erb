@@ -1,0 +1,17 @@
+<h1>Showing recipes for <%= @search_value %></h1>
+
+<table border="1">
+	<tr>
+		<th>Image Icon</th>
+		<th>Title of the recipe</th>
+		<th>Recipe Social Ranking</th>
+	</tr>
+
+	<% @api_return_value["recipes"].each do |individual_recipe| %>
+	<tr>
+		<td><%= link_to( image_tag(individual_recipe["image_url"], size: "100"), individual_recipe["f2f_url"]) %></td>
+		<td><%= link_to( ActionController::Base.helpers.sanitize(individual_recipe["title"], tags: []), individual_recipe["f2f_url"]) %></td>
+		<td><%=	individual_recipe["social_rank"]	%></td>
+	</tr>
+	<% end %>
+</table>

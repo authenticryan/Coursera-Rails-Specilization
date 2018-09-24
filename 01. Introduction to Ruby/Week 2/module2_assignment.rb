@@ -1,3 +1,5 @@
+# Calculating Maximum Word Frequency
+
 class LineAnalyzer
 
   attr_reader :highest_wf_count, :highest_wf_words, :content, :line_number
