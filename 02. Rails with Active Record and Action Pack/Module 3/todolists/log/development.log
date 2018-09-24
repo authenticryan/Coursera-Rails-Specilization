@@ -1,0 +1,453 @@
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:38:53 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 90ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (101.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (96.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodoItems (20180707161626)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" varchar, "completed" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707161626"]]
+  [1m[35m (102.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChageTodoItemDescriptionFromStringToText (20180707162023)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChageTodoItemDescriptionFromStringToText (20180707162023)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "atodo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" varchar, "completed" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "todo_items"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "todo_items"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" text, "completed" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "atodo_items"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "atodo_items"
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707162023"]]
+  [1m[35m (51.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2018-07-07"], ["description", "very important task TEST"], ["created_at", "2018-07-07 16:26:00.246865"], ["updated_at", "2018-07-07 16:26:00.246865"]]
+  [1m[36m (157.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2018-07-05"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2018-07-07 16:26:00.410000"], ["updated_at", "2018-07-07 16:26:00.410000"]]
+  [1m[35m (61.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2018-07-04"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2018-07-07 16:26:00.476465"], ["updated_at", "2018-07-07 16:26:00.476465"]]
+  [1m[36m (62.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 21:56:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 42ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 21:56:45 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.7ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 1413ms (Views: 1405.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/scaffolds.self-0475709db5d0a3eb575ed4a774906d41cba32344ab055b801568da95636348fd.css?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-07-07 21:56:46 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-07-07 21:56:47 +0530
+
+
+Started GET "/todo_items/new" for 127.0.0.1 at 2018-07-07 21:57:37 +0530
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (99.9ms)
+  Rendered todo_items/new.html.erb within layouts/application (126.4ms)
+Completed 200 OK in 206ms (Views: 204.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 127.0.0.1 at 2018-07-07 21:58:08 +0530
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qIpBb/931eC8KLumsHrBvPCvUyyM3vWblSIvXLDxPKFhqqEOoBg8qhz7XEzNc3+fRcaDOlokRcXZvt1XUjDkDw==", "todo_item"=>{"due_date(1i)"=>"2015", "due_date(2i)"=>"4", "due_date(3i)"=>"15", "title"=>"Ryan Dsouza", "description"=>"Studying Desing and Rails", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "todo_items" ("title", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ryan Dsouza"], ["description", "Studying Desing and Rails"], ["due_date", "2015-04-15"], ["created_at", "2018-07-07 16:28:08.851669"], ["updated_at", "2018-07-07 16:28:08.851669"]]
+  [1m[36m (121.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_items/4
+Completed 302 Found in 138ms (ActiveRecord: 122.5ms)
+
+
+Started GET "/todo_items/4" for 127.0.0.1 at 2018-07-07 21:58:09 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.5ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 233ms (Views: 171.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:20:32 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.7ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 134ms (Views: 121.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/todo_items/new" for 127.0.0.1 at 2018-07-07 22:20:35 +0530
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (11.5ms)
+  Rendered todo_items/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 127.0.0.1 at 2018-07-07 22:20:45 +0530
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FcAcfNOg0HRM4iMMEYYC6lK59T3+Bw89PVdSJd9Uikbc4PwdjM85PuwxxOZsj7zJ59AlKyj9v2Nxy6AuPZVS6A==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"7", "due_date(3i)"=>"7", "title"=>"Read Steve jobs", "description"=>""}, "commit"=>"Create Todo item"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "todo_items" ("title", "description", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Read Steve jobs"], ["description", ""], ["due_date", "2018-07-07"], ["created_at", "2018-07-07 16:50:45.511088"], ["updated_at", "2018-07-07 16:50:45.511088"]]
+  [1m[35m (131.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_items
+Completed 302 Found in 143ms (ActiveRecord: 132.2ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:20:45 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_items/show" for 127.0.0.1 at 2018-07-07 22:22:21 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mTodoItem Load (0.6ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find TodoItem with 'id'=show):
+  app/controllers/todo_items_controller.rb:70:in `set_todo_item'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.3ms)
+
+
+Started GET "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:22:31 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered todo_items/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items/5/edit" for 127.0.0.1 at 2018-07-07 22:22:33 +0530
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered todo_items/_form.html.erb (12.6ms)
+  Rendered todo_items/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:22:42 +0530
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aQfjLhTARX59Ytj4gJAP30L/61FQJUVktNqWMgOZwYygJwNPS6+sNN2xPxL9mbH895Y7R4bf9Tr4RmQ54VgZIg==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"7", "due_date(3i)"=>"7", "title"=>"Read Steve jobs", "description"=>"Hello"}, "commit"=>"Update Todo item", "id"=>"5"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "todo_items" SET "description" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?[0m  [["description", "Hello"], ["updated_at", "2018-07-07 16:52:42.675350"], ["id", 5]]
+  [1m[35m (139.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/todo_items/5
+Completed 302 Found in 154ms (ActiveRecord: 140.0ms)
+
+
+Started GET "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:22:42 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered todo_items/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:23:36 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered todo_items/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 65.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/todo_items/5/edit" for 127.0.0.1 at 2018-07-07 22:23:38 +0530
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered todo_items/_form.html.erb (9.5ms)
+  Rendered todo_items/edit.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:23:42 +0530
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e+C2X3OD4SgdxuTs3OMSDk6hU5s5GJaahm/3UJvJ0BCywFY+LOwIYr0VAwah6qwt+8iDje/iJsTK8wVbeQgIvg==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"7", "due_date(3i)"=>"7", "title"=>"Read Steve jobs", "description"=>"Hello", "completed"=>"1"}, "commit"=>"Update Todo item", "id"=>"5"}
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?  [["completed", "t"], ["updated_at", "2018-07-07 16:53:42.978411"], ["id", 5]]
+  [1m[36m (89.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_items/5
+Completed 302 Found in 121ms (ActiveRecord: 90.1ms)
+
+
+Started GET "/todo_items/5" for 127.0.0.1 at 2018-07-07 22:23:43 +0530
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered todo_items/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 98ms (Views: 91.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:25:59 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.4ms)
+  [1m[36mTodoItem Load (3.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:33:08 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.7ms)[0m  SELECT "todo_items".* FROM "todo_items"
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `number_of_completed_tasks' for #<TodoItemsController:0x00007fa731ba4c78>):
+  app/controllers/todo_items_controller.rb:8:in `index'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.7ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:36:40 +0530
+Processing by TodoItemsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all' for nil:NilClass):
+  app/models/todo_item.rb:4:in `number_of_completed_tasks'
+  app/controllers/todo_items_controller.rb:8:in `index'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.6ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:37:01 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.7ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 105ms (Views: 93.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:38:23 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (73.2ms)
+
+
+Started PUT "/__web_console/repl_sessions/7d33bc2033ca174d750177ffde745e81" for 127.0.0.1 at 2018-07-07 22:38:38 +0530
+
+
+Started PUT "/__web_console/repl_sessions/7d33bc2033ca174d750177ffde745e81" for 127.0.0.1 at 2018-07-07 22:38:48 +0530
+
+
+Started PUT "/__web_console/repl_sessions/7d33bc2033ca174d750177ffde745e81" for 127.0.0.1 at 2018-07-07 22:39:28 +0530
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:39:43 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.5ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.6ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-07-07 22:40:25 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "t"]]
+  [1m[35mTodoItem Load (0.5ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 69ms (Views: 63.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-11 16:04:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (6.4ms)
+Completed 200 OK in 94ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2018-09-11 16:05:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/todo_lists"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ryan/.rbenv/versions/2.5.1/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ryan/.rbenv/versions/2.5.1/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ryan/.rbenv/versions/2.5.1/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (40.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (120.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (183.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-11 16:06:41 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-09-11 16:19:34 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 794ms (Views: 714.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.self-0475709db5d0a3eb575ed4a774906d41cba32344ab055b801568da95636348fd.css?body=1" for 127.0.0.1 at 2018-09-11 16:19:35 +0530
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-09-11 16:19:35 +0530
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-09-11 16:19:36 +0530
+
+
+Started DELETE "/todo_items/1" for 127.0.0.1 at 2018-09-11 16:20:16 +0530
+Processing by TodoItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6SRfylfhbEpC6hseC6kPcaIW+1nRO9UKwObAJbQZ+y/RZqi+Ajo7ZGJmW9BBozFJP0qhVNuX78bxf6lrwMZpYA==", "id"=>"1"}
+  [1m[35mTodoItem Load (0.9ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "todo_items" WHERE "todo_items"."id" = ?  [["id", 1]]
+  [1m[36m (95.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_items
+Completed 302 Found in 133ms (ActiveRecord: 97.4ms)
+
+
+Started GET "/todo_items" for 127.0.0.1 at 2018-09-11 16:20:16 +0530
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
+  [1m[36mTodoItem Load (1.1ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 1.5ms)

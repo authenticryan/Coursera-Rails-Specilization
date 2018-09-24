@@ -1,0 +1,953 @@
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+  [1m[35m (0.2ms)[0m  rollback transaction
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47159910769640 type=uuid data=0x37794ef2f4fe4e15...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.011s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x47159909851180 type=uuid data=0x80339cb3ea0c4fa5...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.011s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x47159909491800 type=uuid data=0xafafdb17994f478d...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.019s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x47159908952100 type=uuid data=0x366c5009e4df4a27...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.010s
+MONGODB | localhost:27017 | raceday_development.getMore | STARTED | {"getMore"=>132843412312, "collection"=>"racers", "lsid"=>{"id"=><BSON::Binary:0x47159908952100 type=uuid data=0x366c5009e4df4a27...>}}
+MONGODB | localhost:27017 | raceday_development.getMore | SUCCEEDED | 0.017s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x47159908952100 type=uuid data=0x366c5009e4df4a27...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.010s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x69813823204900 type=uuid data=0xe4bc36344ff34e9d...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x69813823204900 type=uuid data=0xe4bc36344ff34e9d...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.009s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x69813822763540 type=uuid data=0xc092d03daf8c4e75...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.011s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"gender"=>"F", "group"=>"50 to 59"}, "sort"=>{"last_name"=>-1}, "skip"=>0, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x69813822389000 type=uuid data=0x35067c67a95b4b0f...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.007s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x69813822389000 type=uuid data=0x35067c67a95b4b0f...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.010s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{"number"=>1}, "skip"=>0, "projection"=>{"first_name"=>1, "last_name"=>1}, "lsid"=>{"id"=><BSON::Binary:0x47159908146360 type=uuid data=0x3557afaaab044c54...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.015s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"number"=>300}, "sort"=>{"number"=>1}, "skip"=>0, "lsid"=>{"id"=><BSON::Binary:0x47159908274700 type=uuid data=0x2a319227f2884f5e...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>"5b4b6f7a5bcc006de9f88d66"}, "lsid"=>{"id"=><BSON::Binary:0x47159908274700 type=uuid data=0x2a319227f2884f5e...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b6f7a5bcc006de9f88d66')}, "lsid"=>{"id"=><BSON::Binary:0x47159908274700 type=uuid data=0x2a319227f2884f5e...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>"5b4b6f7a5bcc006de9f88d66"}, "lsid"=>{"id"=><BSON::Binary:0x47159908274700 type=uuid data=0x2a319227f2884f5e...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.004s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | raceday_development.listCollections | STARTED | {"listCollections"=>1, "cursor"=>{}, "nameOnly"=>true, "filter"=>{"name"=>{"$not"=>/system\.|\$/}}, "lsid"=>{"id"=><BSON::Binary:0x47159894208840 type=uuid data=0x1182bb09a5444836...>}}
+MONGODB | localhost:27017 | raceday_development.listCollections | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47159894208840 type=uuid data=0x1182bb09a5444836...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.022s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>"5b4b6f7a5bcc006de9f88d66"}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>"5b4b6f7a5bcc006de9f88d66"}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b6f7a5bcc006de9f88d66')}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | raceday_development.getMore | STARTED | {"getMore"=>514405186956, "collection"=>"racers", "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.getMore | SUCCEEDED | 0.021s
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b71945bcc006eef31f3f7')}, "lsid"=>{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.002s
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:22 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (609.4ms)
+Completed 200 OK in 1534ms (Views: 1480.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:25 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (553.1ms)
+Completed 200 OK in 597ms (Views: 595.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b7da65bcc00774e6e3e06" for 127.0.0.1 at 2018-07-15 22:30:26 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b7da65bcc00774e6e3e06"}
+  Rendered racers/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:27 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (532.7ms)
+Completed 200 OK in 594ms (Views: 592.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b7da65bcc00774e6e3e06/edit" for 127.0.0.1 at 2018-07-15 22:30:27 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b7da65bcc00774e6e3e06"}
+  Rendered racers/_form.html.erb (165.8ms)
+  Rendered racers/edit.html.erb within layouts/application (188.7ms)
+Completed 200 OK in 248ms (Views: 237.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:28 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (599.6ms)
+Completed 200 OK in 654ms (Views: 651.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:30:29 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (5.6ms)
+  Rendered racers/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:29 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (575.5ms)
+Completed 200 OK in 614ms (Views: 613.0ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:30:30 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (6.7ms)
+  Rendered racers/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+Started POST "/racers" for 127.0.0.1 at 2018-07-15 22:30:30 +0530
+Processing by RacersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yE4oKV8nZ3iGs6lTq41E+sYUulgOsoENowRxB20Atb5CL1OleUSovEqyrBj6ZmWnhwopz3JFdT7Bcn6IBvccUw==", "racer"=>{"number"=>"1", "first_name"=>"Carly", "last_name"=>"Fiorino", "gender"=>"F", "group"=>"60 to 69", "secs"=>"2833"}, "commit"=>"Create Racer"}
+Redirected to http://www.example.com/racers/5b4b7dae5bcc00774e6e41e9
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b7dae5bcc00774e6e41e9" for 127.0.0.1 at 2018-07-15 22:30:30 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b7dae5bcc00774e6e41e9"}
+  Rendered racers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:30 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (572.0ms)
+Completed 200 OK in 614ms (Views: 612.0ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b7da65bcc00774e6e3e02/edit" for 127.0.0.1 at 2018-07-15 22:30:31 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b7da65bcc00774e6e3e02"}
+  Rendered racers/_form.html.erb (6.7ms)
+  Rendered racers/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+Started PATCH "/racers/5b4b7da65bcc00774e6e3e02" for 127.0.0.1 at 2018-07-15 22:30:31 +0530
+Processing by RacersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HY18njLEIe4wYzecNRl3PJkkCDlvHQ+p5LqTzPCMpY3FZUGBy6bwez1akNmBhRyEePk7GeikOT+PyQTK3QbMHQ==", "racer"=>{"number"=>"1", "first_name"=>"Joe", "last_name"=>"Pesci", "gender"=>"M", "group"=>"masters", "secs"=>"3994"}, "commit"=>"Update Racer", "id"=>"5b4b7da65bcc00774e6e3e02"}
+Redirected to http://www.example.com/racers/5b4b7da65bcc00774e6e3e02
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b7da65bcc00774e6e3e02" for 127.0.0.1 at 2018-07-15 22:30:31 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b7da65bcc00774e6e3e02"}
+  Rendered racers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:30:31 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (556.2ms)
+Completed 200 OK in 605ms (Views: 603.2ms | ActiveRecord: 0.0ms)
+Started DELETE "/racers/5b4b7da65bcc00774e6e3e01" for 127.0.0.1 at 2018-07-15 22:30:32 +0530
+Processing by RacersController#destroy as HTML
+  Parameters: {"id"=>"5b4b7da65bcc00774e6e3e01"}
+Redirected to http://www.example.com/racers
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:30:32 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (750.3ms)
+Completed 200 OK in 811ms (Views: 809.3ms | ActiveRecord: 0.0ms)
+paginate({:page=>1})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x69813821074080 type=uuid data=0x17ce7477ad684555...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.004s
+paginate({:page=>1})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x69813821074080 type=uuid data=0x17ce7477ad684555...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x69813821074080 type=uuid data=0x17ce7477ad684555...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.001s
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:39:37 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.004s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.002s
+  Rendered racers/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 660ms (Views: 572.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-07-15 22:39:38 +0530
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-07-15 22:39:38 +0530
+
+
+Started GET "/racers?page=1&per_page=5" for 127.0.0.1 at 2018-07-15 22:40:02 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"5"}
+paginate({:page=>"1", :per_page=>"5"})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>5, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.003s
+  Rendered racers/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 195ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=5" for 127.0.0.1 at 2018-07-15 22:40:22 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"5"}
+  Rendered racers/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 598ms (Views: 574.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:40:53 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.007s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.006s
+  Rendered racers/index.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 172ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=5" for 127.0.0.1 at 2018-07-15 22:41:50 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"5"}
+  Rendered racers/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 692ms (Views: 666.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:41:51 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 61ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:52 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 61ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:52 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 58ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b80575bcc0079a6983bc4" for 127.0.0.1 at 2018-07-15 22:41:52 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b80575bcc0079a6983bc4"}
+  Rendered racers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 71ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:52 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 66ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b80575bcc0079a6983bc4/edit" for 127.0.0.1 at 2018-07-15 22:41:52 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b80575bcc0079a6983bc4"}
+  Rendered racers/_form.html.erb (33.9ms)
+  Rendered racers/edit.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 79ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 69ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (6.3ms)
+  Rendered racers/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 93ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (5.4ms)
+  Rendered racers/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+Started POST "/racers" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ciR8rWfRhEGziN8GWG2n6Vc2lTng/L9uGpwwpw2UMbmsbkhCJ7MRoC1zmegwvxKFG0jyG4CEe1ZY5ypRr+PNpA==", "racer"=>{"number"=>"1", "first_name"=>"Carly", "last_name"=>"Fiorino", "gender"=>"F", "group"=>"60 to 69", "secs"=>"2833"}, "commit"=>"Create Racer"}
+Redirected to http://www.example.com/racers/5b4b80595bcc0079a6983fa7
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b80595bcc0079a6983fa7" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b80595bcc0079a6983fa7"}
+  Rendered racers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:53 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b80575bcc0079a6983bc0/edit" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b80575bcc0079a6983bc0"}
+  Rendered racers/_form.html.erb (5.5ms)
+  Rendered racers/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+Started PATCH "/racers/5b4b80575bcc0079a6983bc0" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xqY1rORRYy4/sQlfDAp7YaWBX7Pow/1iBXPH6HCtJeQYY1aUxI7Hr0CmVdTFB6YF+K4wxy7QJE3i6+R8PKqx5A==", "racer"=>{"number"=>"1", "first_name"=>"Joe", "last_name"=>"Pesci", "gender"=>"M", "group"=>"masters", "secs"=>"3994"}, "commit"=>"Update Racer", "id"=>"5b4b80575bcc0079a6983bc0"}
+Redirected to http://www.example.com/racers/5b4b80575bcc0079a6983bc0
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b80575bcc0079a6983bc0" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b80575bcc0079a6983bc0"}
+  Rendered racers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+Started DELETE "/racers/5b4b80575bcc0079a6983bbf" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#destroy as HTML
+  Parameters: {"id"=>"5b4b80575bcc0079a6983bbf"}
+Redirected to http://www.example.com/racers
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:41:54 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 66ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:42:29 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 628ms (Views: 603.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:44:01 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 597ms (Views: 573.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:44:31 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 498ms (Views: 472.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:40 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 593ms (Views: 567.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=2&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"2", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=3&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"3", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 58ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=4&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"4", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=5&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"5", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=6&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"6", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 90ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=7&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"7", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 81ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=8&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"8", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 80ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=9&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"9", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 81ms (Views: 67.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=10&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:41 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"10", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 123ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=11&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"11", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 102ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=12&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"12", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 94ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=13&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"13", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 131ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=14&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"14", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 65ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=15&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"15", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 70ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=16&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"16", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 59ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=17&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"17", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 74ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=18&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:42 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"18", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 81ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=19&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"19", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 98ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=20&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"20", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 71ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=21&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"21", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 66ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=22&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"22", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=23&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"23", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 76ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=24&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"24", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 78ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=25&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"25", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 82ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=26&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:43 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"26", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 81ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=27&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"27", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 72ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=28&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"28", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 85ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=29&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"29", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 66ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=30&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"30", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 86ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=31&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"31", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 71ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=32&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"32", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 89ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=33&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"33", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 88ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=34&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"34", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 84ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=35&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:44 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"35", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 98ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=36&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:45 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"36", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 95ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=37&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:45 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"37", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 80ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=38&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:45 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"38", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 89ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=39&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:45 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"39", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 90ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=40&per_page=25" for 127.0.0.1 at 2018-07-15 22:50:45 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"40", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 94ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=5" for 127.0.0.1 at 2018-07-15 22:51:16 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"5"}
+  Rendered racers/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 700ms (Views: 676.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=1&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"1", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 58ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=2&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"2", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 92ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=3&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"3", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 83ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=4&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"4", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 83ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=5&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"5", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 89ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=6&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:17 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"6", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 86ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=7&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"7", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 85ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=8&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"8", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 76ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=9&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"9", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 73ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=10&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"10", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=11&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"11", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 85ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=12&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"12", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 81ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=13&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"13", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 97ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=14&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:18 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"14", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 85ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=15&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"15", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=16&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"16", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 85ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=17&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"17", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 82ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=18&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"18", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 83ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=19&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"19", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 83ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=20&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"20", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 81ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=21&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"21", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 101ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=22&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:19 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"22", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 85ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=23&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"23", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 84ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=24&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"24", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 87ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=25&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"25", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 84ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=26&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"26", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 77ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=27&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"27", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 79ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=28&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"28", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 94ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=29&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"29", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 91ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=30&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:20 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"30", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 73ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=31&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"31", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 73ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=32&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"32", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 84ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=33&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"33", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 69ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=34&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"34", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 67ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=35&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"35", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 98ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=36&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"36", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 85ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=37&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"37", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 96ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=38&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:21 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"38", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 61ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=39&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:22 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"39", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 63ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+Started GET "/racers?page=40&per_page=25" for 127.0.0.1 at 2018-07-15 22:51:22 +0530
+Processing by RacersController#index as HTML
+  Parameters: {"page"=>"40", "per_page"=>"25"}
+  Rendered racers/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 78ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:22 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 74ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:22 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 75ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b82925bcc007bed35a633" for 127.0.0.1 at 2018-07-15 22:51:23 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a633"}
+  Rendered racers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:23 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 66ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b82925bcc007bed35a633/edit" for 127.0.0.1 at 2018-07-15 22:51:23 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a633"}
+  Rendered racers/_form.html.erb (34.8ms)
+  Rendered racers/edit.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:23 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 66ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:51:23 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (5.8ms)
+  Rendered racers/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 75ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+Started GET "/racers/new" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#new as HTML
+  Rendered racers/_form.html.erb (5.8ms)
+  Rendered racers/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+Started POST "/racers" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vGbrLpU+bSVTnrAdsciRCthSaHAm0TSgnS30vOlgATEeBUfGZnxjvWx86AUtplCG5WEw0V20yohnZBL+6Ub1fw==", "racer"=>{"number"=>"1", "first_name"=>"Carly", "last_name"=>"Fiorino", "gender"=>"F", "group"=>"60 to 69", "secs"=>"2833"}, "commit"=>"Create Racer"}
+Redirected to http://www.example.com/racers/5b4b82945bcc007bed35aa16
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b82945bcc007bed35aa16" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b82945bcc007bed35aa16"}
+  Rendered racers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 89ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b82925bcc007bed35a62f/edit" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a62f"}
+  Rendered racers/_form.html.erb (5.9ms)
+  Rendered racers/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+Started PATCH "/racers/5b4b82925bcc007bed35a62f" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CS8vFojOrv60Tf7+MGbMm2wrJj/AGai4eClxZZsuWHD3P9T12kTy9cxYe+0JcmFi+3Tn4y19tXieVdJcN46J7w==", "racer"=>{"number"=>"1", "first_name"=>"Joe", "last_name"=>"Pesci", "gender"=>"M", "group"=>"masters", "secs"=>"3994"}, "commit"=>"Update Racer", "id"=>"5b4b82925bcc007bed35a62f"}
+Redirected to http://www.example.com/racers/5b4b82925bcc007bed35a62f
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+Started GET "/racers/5b4b82925bcc007bed35a62f" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a62f"}
+  Rendered racers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 67ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+Started DELETE "/racers/5b4b82925bcc007bed35a62e" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#destroy as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a62e"}
+Redirected to http://www.example.com/racers
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:51:24 +0530
+Processing by RacersController#index as HTML
+  Rendered racers/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 63ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-15 22:59:20 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.001s
+  Rendered racers/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 112ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers/5b4b82925bcc007bed35a632" for 127.0.0.1 at 2018-07-15 22:59:45 +0530
+Processing by RacersController#show as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a632"}
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b82925bcc007bed35a632')}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.001s
+  Rendered racers/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 74ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:59:46 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.001s
+  Rendered racers/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 118ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers/5b4b82925bcc007bed35a633/edit" for 127.0.0.1 at 2018-07-15 22:59:49 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a633"}
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b82925bcc007bed35a633')}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.001s
+  Rendered racers/_form.html.erb (51.0ms)
+  Rendered racers/edit.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 106ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:59:51 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.003s
+  Rendered racers/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 95ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers/5b4b82925bcc007bed35a638/edit" for 127.0.0.1 at 2018-07-15 22:59:54 +0530
+Processing by RacersController#edit as HTML
+  Parameters: {"id"=>"5b4b82925bcc007bed35a638"}
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{"_id"=>BSON::ObjectId('5b4b82925bcc007bed35a638')}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.002s
+  Rendered racers/_form.html.erb (8.6ms)
+  Rendered racers/edit.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 92ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/racers" for 127.0.0.1 at 2018-07-15 22:59:57 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294157382560 type=uuid data=0xbf93a70bc65c4fa2...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.001s
+  Rendered racers/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 128ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-15 23:40:32 +0530
+Processing by RacersController#index as HTML
+paginate({:page=>nil, :per_page=>nil})
+MONGODB | localhost:27017 | raceday_development.find | STARTED | {"find"=>"racers", "filter"=>{}, "sort"=>{}, "skip"=>0, "limit"=>30, "lsid"=>{"id"=><BSON::Binary:0x70294224496860 type=uuid data=0x5daf6d449246499a...>}}
+MONGODB | localhost:27017 | raceday_development.find | SUCCEEDED | 0.009s
+MONGODB | localhost:27017 | raceday_development.count | STARTED | {"count"=>"racers", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70294224496860 type=uuid data=0x5daf6d449246499a...>}}
+MONGODB | localhost:27017 | raceday_development.count | SUCCEEDED | 0.001s
+  Rendered racers/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 158ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69813823856080 type=uuid data=0xa1613050d4024826...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.006s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69813821074080 type=uuid data=0x17ce7477ad684555...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70294224496860 type=uuid data=0x5daf6d449246499a...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s

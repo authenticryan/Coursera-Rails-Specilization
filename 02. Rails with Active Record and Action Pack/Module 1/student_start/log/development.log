@@ -1,0 +1,225 @@
+  [1m[36m (122.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (97.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCars (20180619024024)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "make" varchar, "color" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180619024024"]]
+  [1m[35m (115.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-19 08:12:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 72ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:12:16 +0530
+Processing by CarsController#index as HTML
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars"
+  Rendered cars/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 3585ms (Views: 3580.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/cars.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/assets/cars.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/assets/scaffolds.self-770d67628e2b9e325ed97233c73bda18060547f37dfc74b2987f78e905f743f1.css?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-06-19 08:12:19 +0530
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-19 08:12:27 +0530
+Processing by CarsController#new as HTML
+  Rendered cars/_form.html.erb (61.7ms)
+  Rendered cars/new.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 171ms (Views: 157.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-19 08:12:38 +0530
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bTz9+Wg4pGJ6AT4HGYWoeuotAEk0+QONuH6OLmM43C5Zun7avCfau5EGXt+v6o85nTV8Haw8h2Lb+bK/2gHF5A==", "car"=>{"make"=>"BMW ", "color"=>"Black ", "year"=>"2015"}, "commit"=>"Create Car"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.8ms)[0m  INSERT INTO "cars" ("make", "color", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["make", "BMW "], ["color", "Black "], ["year", 2015], ["created_at", "2018-06-19 02:42:38.752205"], ["updated_at", "2018-06-19 02:42:38.752205"]]
+  [1m[36m (144.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/cars/1
+Completed 302 Found in 185ms (ActiveRecord: 155.3ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2018-06-19 08:12:38 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCar Load (0.6ms)[0m  SELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cars/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 172ms (Views: 140.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:12:42 +0530
+Processing by CarsController#index as HTML
+  [1m[36mCar Load (0.5ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-19 08:12:43 +0530
+Processing by CarsController#new as HTML
+  Rendered cars/_form.html.erb (6.7ms)
+  Rendered cars/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-19 08:12:55 +0530
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmqOCHXwDuWjpIMfinsCd3JLQFYMKDL3OPwLOX1apeIy7A0roe9wPEij48c8FCU0BVM8ApTtthhbezeoxGO8KA==", "car"=>{"make"=>"Toyoto", "color"=>"Beige", "year"=>"2911"}, "commit"=>"Create Car"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "cars" ("make", "color", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Toyoto"], ["color", "Beige"], ["year", 2911], ["created_at", "2018-06-19 02:42:55.026250"], ["updated_at", "2018-06-19 02:42:55.026250"]]
+  [1m[35m (212.5ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/cars/2
+Completed 302 Found in 230ms (ActiveRecord: 221.6ms)
+
+
+Started GET "/cars/2" for 127.0.0.1 at 2018-06-19 08:12:55 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered cars/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:13:20 +0530
+Processing by CarsController#index as HTML
+  [1m[35mCar Load (0.4ms)[0m  SELECT "cars".* FROM "cars"
+  Rendered cars/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-19 08:14:12 +0530
+Processing by CarsController#new as HTML
+  Rendered cars/_form.html.erb (6.8ms)
+  Rendered cars/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-19 08:14:35 +0530
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MX+7MwbfzcKWWsoudoDJJ+2kYlagGBWI+3DIRZRPsmEF+TgQ0sCzG31dqvbA7+5kmrweAjjdkWeY9/TULXarqw==", "car"=>{"make"=>"Mercedes ", "color"=>"White", "year"=>"2018"}, "commit"=>"Create Car"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cars" ("make", "color", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["make", "Mercedes "], ["color", "White"], ["year", 2018], ["created_at", "2018-06-19 02:44:35.397704"], ["updated_at", "2018-06-19 02:44:35.397704"]]
+  [1m[36m (215.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/cars/3
+Completed 302 Found in 230ms (ActiveRecord: 216.5ms)
+
+
+Started GET "/cars/3" for 127.0.0.1 at 2018-06-19 08:14:35 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCar Load (1.0ms)[0m  SELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered cars/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 91ms (Views: 84.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:14:40 +0530
+Processing by CarsController#index as HTML
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPriceToCars (20180619024556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "cars" ADD "price" decimal(10,2)[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180619024556"]]
+  [1m[36m (99.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-19 08:16:53 +0530
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by CarsController#new as HTML
+  Rendered cars/_form.html.erb (10.2ms)
+  Rendered cars/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 97ms (Views: 74.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:17:23 +0530
+Processing by CarsController#index as HTML
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2018-06-19 08:17:26 +0530
+Processing by CarsController#new as HTML
+  Rendered cars/_form.html.erb (5.2ms)
+  Rendered cars/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2018-06-19 08:17:35 +0530
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"885bgLsR0vd+hrsCrvgOE6B5AZG+FVXI0UhLtrMTkanHSNijbw6sLpWB29oYlylQ12F9xSbQ0Seyz3cnCiqIYw==", "car"=>{"make"=>"Mercedes ", "color"=>"fdlkjgakjsdg", "year"=>"2019"}, "commit"=>"Create Car"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("make", "color", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "Mercedes "], ["color", "fdlkjgakjsdg"], ["year", 2019], ["created_at", "2018-06-19 02:47:35.902909"], ["updated_at", "2018-06-19 02:47:35.902909"]]
+  [1m[35m (156.8ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/cars/4
+Completed 302 Found in 178ms (ActiveRecord: 157.6ms)
+
+
+Started GET "/cars/4" for 127.0.0.1 at 2018-06-19 08:17:36 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCar Load (0.5ms)[0m  [1mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered cars/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 95ms (Views: 83.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2018-06-19 08:17:39 +0530
+Processing by CarsController#index as HTML
+  [1m[35mCar Load (1.1ms)[0m  SELECT "cars".* FROM "cars"
+  Rendered cars/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameMakeToCompany (20180619025517)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "acars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company" varchar, "color" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "price" decimal(10,2)) [0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "cars"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (1, 'BMW ', 'Black ', 2015, '2018-06-19 02:42:38.752205', '2018-06-19 02:42:38.752205', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (2, 'Toyoto', 'Beige', 2911, '2018-06-19 02:42:55.026250', '2018-06-19 02:42:55.026250', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (3, 'Mercedes ', 'White', 2018, '2018-06-19 02:44:35.397704', '2018-06-19 02:44:35.397704', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (4, 'Mercedes ', 'fdlkjgakjsdg', 2019, '2018-06-19 02:47:35.902909', '2018-06-19 02:47:35.902909', NULL)
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "cars"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameMakeToCompany (20180619025517)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "acars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company" varchar, "color" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "price" decimal(10,2)) [0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "cars"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (1, 'BMW ', 'Black ', 2015, '2018-06-19 02:42:38.752205', '2018-06-19 02:42:38.752205', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (2, 'Toyoto', 'Beige', 2911, '2018-06-19 02:42:55.026250', '2018-06-19 02:42:55.026250', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (3, 'Mercedes ', 'White', 2018, '2018-06-19 02:44:35.397704', '2018-06-19 02:44:35.397704', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acars" ("id","company","color","year","created_at","updated_at","price") VALUES (4, 'Mercedes ', 'fdlkjgakjsdg', 2019, '2018-06-19 02:47:35.902909', '2018-06-19 02:47:35.902909', NULL)
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "cars"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company" varchar, "color" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "price" decimal(10,2)) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "acars"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "cars" ("id","company","color","year","created_at","updated_at","price") VALUES (1, 'BMW ', 'Black ', 2015, '2018-06-19 02:42:38.752205', '2018-06-19 02:42:38.752205', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "cars" ("id","company","color","year","created_at","updated_at","price") VALUES (2, 'Toyoto', 'Beige', 2911, '2018-06-19 02:42:55.026250', '2018-06-19 02:42:55.026250', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "cars" ("id","company","color","year","created_at","updated_at","price") VALUES (3, 'Mercedes ', 'White', 2018, '2018-06-19 02:44:35.397704', '2018-06-19 02:44:35.397704', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "cars" ("id","company","color","year","created_at","updated_at","price") VALUES (4, 'Mercedes ', 'fdlkjgakjsdg', 2019, '2018-06-19 02:47:35.902909', '2018-06-19 02:47:35.902909', NULL)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "acars"
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180619025517"]]
+  [1m[35m (95.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
