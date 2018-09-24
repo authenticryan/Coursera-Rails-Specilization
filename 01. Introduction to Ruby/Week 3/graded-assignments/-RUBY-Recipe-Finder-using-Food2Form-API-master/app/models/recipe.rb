@@ -1,5 +1,7 @@
 require 'httparty'
 
+# food2fork_key is 77ae1fc668c176486dc47d6cbd58cf08
+
 class Recipe
 	include HTTParty
 

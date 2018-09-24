@@ -1,0 +1,21 @@
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 17:45:15 +0530
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 4083ms (Views: 1443.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes_controller.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-09-24 17:45:20 +0530
+
+
+Started GET "/assets/recipes_controller.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-09-24 17:45:20 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 18:15:59 +0530
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 4259ms (Views: 952.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2018-09-24 18:16:03 +0530
