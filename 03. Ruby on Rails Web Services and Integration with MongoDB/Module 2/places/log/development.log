@@ -7271,27 +7271,64 @@ Completed 200 OK in 117ms (Views: 102.2ms | ActiveRecord: 0.0ms)
   Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.2ms)
 
 
-Started GET "/" for ::1 at 2018-08-19 22:17:35 +0530
+Started GET "/places" for 127.0.0.1 at 2018-09-24 20:28:21 +0530
 Processing by PlacesController#index as HTML
 MONGODB | Adding localhost:27017 to the cluster.
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-MONGODB | Connection refused - connect(2) for 127.0.0.1:27017
-Completed   in 9704ms (ActiveRecord: 0.0ms)
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"places", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.0013189299999999998s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$skip=>0}, {:$limit=>0}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | FAILED | the limit must be positive (15958) | 0.001232915s
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+Mongo::Error::OperationFailure (the limit must be positive (15958)):
+  app/models/place.rb:76:in `all'
+  app/controllers/places_controller.rb:7:in `index'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:28:25 +0530
+Processing by PlacesController#index as HTML
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"places", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.000927238s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$skip=>0}, {:$limit=>0}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | FAILED | the limit must be positive (15958) | 0.002435774s
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+Mongo::Error::OperationFailure (the limit must be positive (15958)):
+  app/models/place.rb:76:in `all'
+  app/controllers/places_controller.rb:7:in `index'
+
+
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/ryan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+MONGODB | Adding localhost:27017 to the cluster.
+MONGODB | localhost:27017 | places_development.find | STARTED | {"find"=>"fs.files", "filter"=>{}, "skip"=>0, "limit"=>0}
+MONGODB | localhost:27017 | places_development.find | SUCCEEDED | 0.000702439s
+MONGODB | localhost:27017 | places_development.count | STARTED | {"count"=>"places", "query"=>{}}
+MONGODB | localhost:27017 | places_development.count | SUCCEEDED | 0.000964428s
+MONGODB | localhost:27017 | places_development.aggregate | STARTED | {"aggregate"=>"places", "pipeline"=>[{:$skip=>0}, {:$limit=>0}], "cursor"=>{}}
+MONGODB | localhost:27017 | places_development.aggregate | FAILED | the limit must be positive (15958) | 0.001900295s
