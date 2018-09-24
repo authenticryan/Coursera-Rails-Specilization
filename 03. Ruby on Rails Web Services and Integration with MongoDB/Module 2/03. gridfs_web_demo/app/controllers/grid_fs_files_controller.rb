@@ -2,6 +2,7 @@ class GridFsFilesController < ApplicationController
   before_action :set_grid_fs_file, only: [:show, :edit, :update, :destroy, :contents]
 
   def contents
+    # similar to render but allows properties like inline display along with other properties
     send_data @grid_fs_file.contents, 
               {filename: @grid_fs_file.filename, type: @grid_fs_file.contentType, disposition: 'inline'}
   end
